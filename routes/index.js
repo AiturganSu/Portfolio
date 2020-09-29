@@ -18,7 +18,7 @@ router.get('/products', function(req, res, next) {
 
 //Services Page
 router.get('/services', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index', { title: 'Services' });
 });
 
 //Contact page
