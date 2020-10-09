@@ -1,21 +1,47 @@
-
 <%- include('./partials/header.ejs') -%>
-<%- include('./partials/mainnav.ejs') -%>
- <main class="container">
-<div class="raw">
-<div class="column">
+    <%- include('./partials/mainnav.ejs') -%>
+        <main class="container">
+            <div class="raw">
+                <div class="column">
 
- <section class="contact-area" id="#contact">
-  <div class="text-part">
-    <h1 class="display-4">Contact Us</h1> 
-    <h2>Hello I am Aiturgan Suiunbai kyzy. 
-      I am a professional Web Developer from Ontario, Toronto ;
-  </div>
-</section>
-</div>
-</div>
-</main>
- 
-<%- include('./partials/bottomnav.ejs') -%>
-<%- include('./partials/footer.ejs') -%>
+                    <section class="contact-area" id="#contact">
+                        <div class="text-part">
+                            <h1 class="display-4">Contact Us</h1>
+                        </div>
+                    </section>
+                </div>
+            </div>
 
+
+            <div class="row justify-content-md-center">
+                <div class="col-lg-8 col-md-8 col-sm-10 col-xs-10">
+                    <form>
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" class="form-control" id="fullName" aria-describedby="fullName" name="fullName" placeholder="Enter you Full Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="text" class="form-control" id="contactNumber" aria-describedby="emailHelp" name="contactnumber" placeholder="Enter your Contact Number" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="emailAddress">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email" placeholder="Enter your Email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Leave a message for us" name="fullName"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-lg btn-primary" id="sendButton"> <i class="fas fa-paper-plane"></i> Send</button>
+                        <button type="submit" class="btn btn-lg btn-warning" id="cancelButton"> <i class="fas fa-undo"></i> Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+
+        <%- include('./partials/bottomnav.ejs') -%>
+            <%- include('./partials/footer.ejs') -%>
