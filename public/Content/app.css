@@ -242,3 +242,12 @@
         -webkit-background-size: cover;
         background-size: cover;
     }
+    
+    .resume {
+        margin-top: 200px;
+    }
+    
+    .box img {
+        position: fixed;
+        justify-content: center;
+    }
