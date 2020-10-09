@@ -34,6 +34,16 @@
                 }
             })
 
+            if (document.title == "About") {
+                let hireButton = document.getElementById("hireButton");
+                let form = document.forms[0];
+
+                hireButton.addEventListener("click", (event) => {
+                    if (confirm("Different page will be opened.Are you sure you want to leave this page?")) {
+                        location.href = "/";
+                    }
+                })
+            }
         }
     }
 
