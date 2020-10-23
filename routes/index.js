@@ -35,21 +35,7 @@ router.get('/resume', function(req, res, next) {
     res.render('resume', { title: 'resume' });
 });
 
-//Contact-list page
-router.get('/contactlist', function(req, res, next) {
 
-    contactlist.Model.find((err, data) => {
-        if (err) {
-            console.error(err);
-            res.end();
-        }
-
-
-        console.log(data);
-        res.render('contactlist', { title: 'contact list', contactlist: data });
-    });
-
-});
 
 
 
