@@ -1,0 +1,36 @@
+<%- include('./partials/header.ejs') -%>
+    <%- include('./partials/mainnav.ejs') -%>
+        <section class="contactlist-area" id="/contactlist">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Contact Number</th>
+                                <th scope="col">email</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for(let count=0; count < contactlist.length; count++){%>
+                                <tr>
+
+                                    <td>
+                                        <%= contactlist[count].name %>
+                                    </td>
+                                    <td>
+                                        <%= contactlist[count].number %>
+                                    </td>
+                                    <td>
+                                        <%= contactlist[count].email %>
+                                    </td>
+                                </tr>
+                                <%}%>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        <%- include('./partials/bottomnav.ejs') -%>
+            <%- include('./partials/footer.ejs') -%>

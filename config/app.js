@@ -5,11 +5,37 @@ let cookieParser = require('cookie-parser');
 let logger = require('morgan');
 
 
-
 let indexRouter = require('../routes/index');
 
 
 let app = express();
+
+let mongoose = require('mongoose');
+let DB = require("./DB");
+
+mongoose.connect(DB.URL, { useNewUrlParser: true, useUnifiedTopology: true });
+
+
+let dbConnection = mongoose.connection; //alias
+
+dbConnection.on('error', console.error.bind(console, 'connection error:'));
+dbConnection.on('once', () => {
+    console.log('MongoDb Connection OPEN')
+});
+
+dbConnection.on('connected', () => {
+    console.log('MongoDb Connected')
+});
+
+dbConnection.on('disconnected', () => {
+    console.log('MongoDb Disconneced ')
+});
+
+dbConnection.on('reconnected', () => {
+    console.log('MongoDb Reconnected ')
+});
+
+
 
 // view engine setup
 app.set('../views', path.join(__dirname, 'views'));

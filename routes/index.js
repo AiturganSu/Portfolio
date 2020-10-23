@@ -1,6 +1,10 @@
 let express = require('express');
 let router = express.Router();
 
+let mongoose = require('mongoose');
+let contactlist = require('../models/contactlist');
+
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('index', { title: 'Express' });
@@ -30,5 +34,23 @@ router.get('/contacts', function(req, res, next) {
 router.get('/resume', function(req, res, next) {
     res.render('resume', { title: 'resume' });
 });
+
+//Contact-list page
+router.get('/contactlist', function(req, res, next) {
+
+    contactlist.Model.find((err, data) => {
+        if (err) {
+            console.error(err);
+            res.end();
+        }
+
+
+        console.log(data);
+        res.render('contactlist', { title: 'contact list', contactlist: data });
+    });
+
+});
+
+
 
 module.exports = router;
