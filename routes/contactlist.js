@@ -21,25 +21,36 @@ router.get('/', function(req, res, next) {
 });
 
 //Get add page CREATE
-router.get('/add', (req, res, next) => {
+router.get('/addcontact', (req, res, next) => {
+    res.render('addcontact', { title: 'add contact' });
+});
+//post process the add page CREATE
+router.post('/addcontact', (req, res, next) => {
 
-    })
-    //post process the add page CREATE
-router.post('/add', (req, res, next) => {
+    let contactlist = contactlist({
+        "name": req.body.name,
+        "number": req.body.number,
+        "email": req.body.email
+    });
 
-    })
-    //get the edit page UPDATE
+    console.log(contactlist);
+
+    res.redirect('/contactlist');
+
+});
+
+//get the edit page UPDATE
 router.get('/edit/:id', (req, res, next) => {
 
-    })
-    //post request the edit page UPDATE
+});
+//post request the edit page UPDATE
 router.get('/edit/:id', (req, res, next) => {
 
-    })
-    //get process the delete page DELETE
+});
+//get process the delete page DELETE
 router.get('/delete/:id', (req, res, next) => {
 
-})
+});
 
 
 module.exports = router;

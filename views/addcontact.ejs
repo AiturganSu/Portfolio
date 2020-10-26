@@ -1,0 +1,34 @@
+<%- include('./partials/header.ejs') -%>
+    <%- include('./partials/mainnav.ejs') -%>
+        <section class="addcontact-area" id="/addcontact">
+
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <!--Form goes here-->
+                    <form method="POST">
+                        <div class="form-name">
+                            <label for="name">Name </label>
+                            <input type="text" class="form-control" id="name" aria-describedby="name" name="name" placeholder="Enter your name" required>
+
+                        </div>
+                        <div class="form-number">
+                            <label for="number">Contact Number </label>
+                            <input type="text" class="form-control" id="number" aria-describedby="number" name="number" placeholder="Enter your contact number" required>
+
+                        </div>
+
+                        <div class="form-email">
+                            <label for="text">Email </label>
+                            <input type="email" class="form-control" id="email" aria-describedby="email" name="email" placeholder="Enter your email" required>
+
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Add Contact</button>
+                        <a href="/contactlist" class="btn btn-warning btn-lg"></i>Cancel</a>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+        <%- include('./partials/bottomnav.ejs') -%>
+            <%- include('./partials/footer.ejs') -%>
